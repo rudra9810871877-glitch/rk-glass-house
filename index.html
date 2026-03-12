@@ -2,20 +2,109 @@
 <html>
 <head>
 <title>RK Glass House</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f4f4f4;
+}
+header{
+  background:black;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+section{
+  padding:20px;
+}
+.services{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+.card{
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 0 5px rgba(0,0,0,0.2);
+  text-align:center;
+}
+.gallery, .videos{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+footer{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+button{
+  padding:10px 20px;
+  background:green;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
+<header>
 <h1>RK Glass House</h1>
+<p>Glass & Aluminium Work Services</p>
+</header>
 
-<p>Window Glass | Mirror Fitting | Aluminium Work</p>
-<p>Glass Cutting | Glass Film | Glass Grinding | Beveling</p>
+<section>
+<h2>Our Services</h2>
+<div class="services">
+  <div class="card">Window Glass</div>
+  <div class="card">Mirror Fitting</div>
+  <div class="card">Aluminium Work</div>
+  <div class="card">Glass Cutting</div>
+  <div class="card">Glass Film</div>
+  <div class="card">Glass Grinding</div>
+  <div class="card">Beveling</div>
+</div>
+</section>
 
-<h2>Address</h2>
-<p>Shop no 1, Dayal Bagh Road, Near Reliance Fresh, Eros Garden Faridabad</p>
+<section>
+<h2>Gallery</h2>
+<p>Photos will be added here later.</p>
+<div class="gallery">
+<!-- Photos upload karne ke baad yaha add karenge -->
+</div>
+</section>
 
+<section>
+<h2>Videos</h2>
+<p>Videos will be added here later.</p>
+<div class="videos">
+<!-- Videos upload karne ke baad yaha add karenge -->
+</div>
+</section>
+
+<section>
 <h2>Contact</h2>
-<p>9810871877</p>
-<p>9810071877</p>
+<p>Address: Shop no 1, Dayal Bagh Road, Near Reliance Fresh, Eros Garden Faridabad</p>
+<p>Phone: 9810871877 / 9810071877</p>
+<a href="https://wa.me/919810871877" target="_blank">
+  <button>Chat on WhatsApp</button>
+</a>
+</section>
+
+<section>
+<h2>Location</h2>
+<p>Google Maps location will be added here later.</p>
+</section>
+
+<footer>
+<p>© RK Glass House</p>
+</footer>
 
 </body>
 </html>
