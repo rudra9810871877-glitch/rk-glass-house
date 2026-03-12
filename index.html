@@ -1,53 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RK Glass House</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body{
-  font-family: Arial, sans-serif;
-  margin:0;
-  background:#f4f4f4;
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
+  color: #333;
 }
-header{
-  background:black;
-  color:white;
-  padding:20px;
-  text-align:center;
+header {
+  background: linear-gradient(to right, #004d40, #00796b);
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
 }
-section{
-  padding:20px;
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 1px 1px 2px #00000055;
 }
-.services{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+header p {
+  font-size: 1.1em;
+  margin-top: 5px;
 }
-.card{
-  background:white;
-  padding:15px;
-  border-radius:8px;
-  box-shadow:0 0 5px rgba(0,0,0,0.2);
-  text-align:center;
+
+/* Section Styling */
+section {
+  padding: 20px 15px;
+  margin: 10px auto;
+  max-width: 1000px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-.gallery, .videos{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
-footer{
-  background:black;
-  color:white;
-  text-align:center;
-  padding:15px;
+.card {
+  background: linear-gradient(145deg, #ffffff, #c8e6c9);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  text-align: center;
+  font-weight: 600;
+  color: #004d40;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
-button{
-  padding:10px 20px;
-  background:green;
-  color:white;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Gallery & Videos */
+.gallery, .videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+.placeholder {
+  background: #b2dfdb;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #004d40;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 0.95em;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+button {
+  padding: 12px 22px;
+  background: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.3s;
+}
+button:hover {
+  background: #004d40;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #004d40, #00796b);
+  color: white;
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 20px;
+  font-size: 0.9em;
 }
 </style>
 </head>
@@ -56,7 +113,7 @@ button{
 
 <header>
 <h1>RK Glass House</h1>
-<p>Glass & Aluminium Work Services</p>
+<p>Professional Glass & Aluminium Work Services</p>
 </header>
 
 <section>
@@ -74,17 +131,17 @@ button{
 
 <section>
 <h2>Gallery</h2>
-<p>Photos will be added here later.</p>
 <div class="gallery">
-<!-- Photos upload karne ke baad yaha add karenge -->
+  <div class="placeholder">Photos will be added here</div>
+  <div class="placeholder">Photos will be added here</div>
 </div>
 </section>
 
 <section>
 <h2>Videos</h2>
-<p>Videos will be added here later.</p>
 <div class="videos">
-<!-- Videos upload karne ke baad yaha add karenge -->
+  <div class="placeholder">Videos will be added here</div>
+  <div class="placeholder">Videos will be added here</div>
 </div>
 </section>
 
@@ -99,7 +156,7 @@ button{
 
 <section>
 <h2>Location</h2>
-<p>Google Maps location will be added here later.</p>
+<div class="placeholder">Google Maps location will be added here</div>
 </section>
 
 <footer>
