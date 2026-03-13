@@ -1,83 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RK Glass House Aluminium Fabrication</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>RK Glass House</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 3D Particle Background -->
-  <canvas id="bg-canvas"></canvas>
 
-  <!-- Hero Section -->
-  <header>
-    <div class="hero-content">
-      <h1>RK Glass House</h1>
-      <p>Professional Glass & Aluminium Services in Faridabad | Serving Delhi NCR</p>
-      <div class="cta-buttons">
-        <a href="tel:+919810871877" class="cta-btn call">📞 Call Now</a>
-        <a href="https://wa.me/919810871877" target="_blank" class="cta-btn whatsapp">💬 Chat on WhatsApp</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <p class="note">Click on a service to see related photos & videos</p>
-    <div class="services-container">
-      <div class="service" data-service="window">Window Glass</div>
-      <div class="service" data-service="mirror">Mirror Fitting</div>
-      <div class="service" data-service="aluminium">Aluminium Work</div>
-      <div class="service" data-service="cutting">Glass Cutting</div>
-      <div class="service" data-service="grinding">Glass Grinding</div>
-      <div class="service" data-service="beveling">Beveling</div>
-      <div class="service" data-service="film">Glass Film</div>
-      <div class="service" data-service="designer">Designer Glass</div>
-      <div class="service" data-service="partition">Glass Partition</div>
-    </div>
-  </section>
-
-  <!-- Photo Gallery -->
-  <section id="photo-gallery">
-    <h2>Photo Gallery</h2>
-    <div class="slide-gallery" id="photo-container"></div>
-  </section>
-
-  <!-- Video Gallery -->
-  <section id="video-gallery">
-    <h2>Video Gallery</h2>
-    <div class="slide-gallery" id="video-container"></div>
-  </section>
-
-  <!-- Contact & Location -->
-  <section id="contact">
-    <h2>Contact & Location</h2>
-    <div class="contact-info-container">
-      <div class="contact-buttons">
-        <a href="tel:+919810871877" class="contact-btn call">📞 Call Now</a>
-        <a href="https://wa.me/919810871877" target="_blank" class="contact-btn whatsapp">💬 Chat on WhatsApp</a>
-      </div>
-      <p>Shop No 1, Dayal Bagh Road, In front of Shubham Complex, Near Reliance Fresh, Eros Garden, Faridabad <br>
-      Phone: <a href="tel:+919810871877">9810871877</a>, <a href="tel:+919810071877">9810071877</a></p>
-      <iframe 
-        src="https://www.google.com/maps?q=28.4331,77.3002&hl=es;z=17&output=embed" 
-        width="100%" height="300" 
-        style="border:0; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.3);" 
-        allowfullscreen="" loading="lazy">
-      </iframe>
-    </div>
-  </section>
-
-  <!-- Lightbox Overlay -->
-  <div id="lightbox-overlay">
-    <span id="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="" alt="">
-    <video id="lightbox-video" controls></video>
+<header>
+  <h1>RK Glass House</h1>
+  <div class="timing">
+    <p>Shop Timing: 8:30 AM – 8:00 PM (Tuesday Closed)</p>
   </div>
+</header>
 
-  <script src="script.js"></script>
+<!-- WhatsApp & Call Floating Buttons -->
+<a href="https://wa.me/YourNumber" class="whatsapp" target="_blank">Chat on WhatsApp</a>
+<a href="tel:+YourNumber" class="call">Call Now</a>
+
+<section>
+<h2>Our Services</h2>
+<p>Click on any service to see photos and videos</p>
+
+<div class="services">
+    <div class="service-box" data-service="aluminium">Aluminium Work</div>
+    <div class="service-box" data-service="glass">Glass Work</div>
+    <div class="service-box" data-service="partition">Glass Partition</div>
+    <div class="service-box" data-service="glass_work">Glass Work (Extra)</div>
+    <div class="service-box" data-service="mirror">Mirror</div>
+</div>
+</section>
+
+<section>
+<div id="photo-slider"></div>
+<div id="video-slider"></div>
+</section>
+
+<section class="reviews">
+<h2>Customer Reviews</h2>
+<!-- Placeholder for Google Review embed -->
+<iframe src="https://www.google.com/maps/embed?pb=!1m2!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
