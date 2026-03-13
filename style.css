@@ -22,18 +22,17 @@ header p {font-size:20px; color:#d0e1ff; margin:10px 0 20px;}
 
 /* Services */
 #services {background: rgba(20,20,20,0.95); padding:60px 20px; text-align:center;}
-#services h2 {font-size:34px; margin-bottom:40px; color:#b0c4de;}
+#services h2 {font-size:34px; margin-bottom:10px; color:#b0c4de;}
+#services .note {color:#d0e1ff; margin-bottom:20px; font-size:16px;}
 .services-container {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
 .service {
   background: linear-gradient(135deg,#a9a9a9,#5f9ea0);
   color:#fff; padding:25px 30px; border-radius:12px; font-weight:600; min-width:180px;
-  text-align:center; transition: transform 0.3s, box-shadow 0.3s;
+  text-align:center; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s;
 }
 .service:hover {transform: translateY(-5px) scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.5);}
 
-/* Gallery Slide */
-#gallery {padding:60px 20px; text-align:center; background: rgba(30,30,30,0.95);}
-#gallery h2 {font-size:34px; margin-bottom:30px; color:#b0c4de;}
+/* Slide Gallery */
 .slide-gallery {display:flex; overflow-x:auto; gap:20px; padding-bottom:10px; scroll-behavior: smooth;}
 .slide-gallery img, .slide-gallery video {
   flex:0 0 auto; width:300px; height:200px; border-radius:12px;
