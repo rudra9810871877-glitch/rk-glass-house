@@ -1,18 +1,19 @@
-
-// 3D Background Particles
+// 3D Animated Gradient Particles Background
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+const colors = ['#00d4ff','#0059b3','#00ffbb','#00a3b3','#0077ff'];
 const particles = [];
-for(let i=0;i<150;i++){
+for(let i=0;i<180;i++){
   particles.push({
     x: Math.random()*canvas.width,
     y: Math.random()*canvas.height,
     r: Math.random()*2+1,
     dx: (Math.random()-0.5)*1,
-    dy: (Math.random()-0.5)*1
+    dy: (Math.random()-0.5)*1,
+    color: colors[Math.floor(Math.random()*colors.length)]
   });
 }
 
@@ -21,7 +22,7 @@ function animate(){
   for(let p of particles){
     ctx.beginPath();
     ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle='rgba(30,144,255,0.6)';
+    ctx.fillStyle=p.color;
     ctx.fill();
     p.x += p.dx; p.y += p.dy;
     if(p.x<0||p.x>canvas.width) p.dx*=-1;
@@ -29,13 +30,15 @@ function animate(){
   }
   requestAnimationFrame(animate);
 }
+animate();
 
-// Dynamic Gallery + Lightbox
+// Gallery + Videos
 const gallery = document.getElementById('gallery-container');
 const mediaFiles = [
   'images/photo1.jpg',
   'images/photo2.jpg',
-  'videos/video1.mp4'
+  'videos/video1.mp4',
+  'videos/video2.mp4'
 ];
 
 const lightbox = document.getElementById('lightbox-overlay');
