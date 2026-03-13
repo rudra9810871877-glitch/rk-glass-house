@@ -1,172 +1,153 @@
 
-    
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RK Glass House</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #799ED7, #123d2f);
-      color: #0f2c1f;
-    }
-    .glass-card {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .glass-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
-    .serviceBtn.active {
-      background-color: #22c55e;
-      color: white;
-    }
-    .card-3d {
-      perspective: 1000px;
-      transition: transform 0.5s;
-    }
-    .card-3d:hover {
-      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-    }
-    .shine-text {
-      background: linear-gradient(90deg, #22c55e, #799ED7, #22c55e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 2s infinite linear;
-    }
-    @keyframes shine {
-      0% {background-position: -200%;}
-      100% {background-position: 200%;}
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RK Glass House – Delhi</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1,h2,h3 { font-family: 'Poppins', sans-serif; }
+
+  /* 3D card animation */
+  .card-3d {
+    perspective: 1000px;
+  }
+  .card-3d-inner {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  .card-3d:hover .card-3d-inner,
+  .card-3d:active .card-3d-inner {
+    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
+  }
+
+  /* Buttons 3D effect */
+  .btn-3d {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .btn-3d:hover, .btn-3d:active {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Active service filter */
+  .filterBtn.active { background-color: #0f2c4f; color: white; }
+</style>
 </head>
-<body class="antialiased">
+<body class="bg-[#fdf6eb] text-[#0f2c4f]">
 
-<!-- Hero Section -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-cream-50 via-white to-799ED7 py-12">
-  <h1 class="text-5xl md:text-7xl font-bold shine-text mb-4">RK Glass House</h1>
-  <p class="text-xl md:text-2xl mb-4">Expert Window Glass, Mirror Fitting, Aluminium Work, Custom Cutting & More in Delhi</p>
-  <p class="mb-6 font-semibold">Open: 8:30 AM – 8:00 PM | Closed on Tuesday</p>
-  <p class="mb-6 text-lg"><a href="tel:+919810871877" class="underline">+91 98108 71877</a></p>
-  <div class="flex flex-wrap gap-4 justify-center">
-    <a href="https://wa.me/919810871877" class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition">Chat on WhatsApp</a>
-    <a href="tel:+919810871877" class="px-6 py-3 bg-white text-navy-900 font-bold rounded-lg shadow-lg hover:scale-105 transition">Call Now</a>
+<!-- HERO -->
+<section class="text-center py-16 px-6 bg-gradient-to-b from-[#0f2c4f] via-[#799ED7] to-[#fdf6eb] shadow-lg">
+  <h1 class="text-5xl md:text-6xl font-bold mb-3 text-[#fdf6eb]">RK Glass House</h1>
+  <p class="text-lg md:text-xl mb-3 text-[#fdf6eb]">Expert Window Glass, Mirror Fitting, Aluminium Work, Custom Cutting & More in Delhi</p>
+  <p class="text-[#fdf6eb] mb-4">Open: 8:30 AM – 8:00 PM | Closed on Tuesday</p>
+  <p class="text-xl font-semibold mb-6"><a href="tel:+919810871877" class="underline">+91 98108 71877</a></p>
+
+  <div class="flex justify-center gap-4 flex-wrap">
+    <a href="https://wa.me/919810871877" class="btn-3d bg-[#22c55e] text-white font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-[#16a34a]">Chat on WhatsApp</a>
+    <a href="tel:+919810871877" class="btn-3d bg-[#0f2c4f] text-[#fdf6eb] font-semibold py-3 px-8 rounded-xl shadow-lg hover:bg-[#123d5e]">Call Now</a>
   </div>
 </section>
 
-<!-- Services Section -->
-<section class="py-12 px-6 bg-cream-50">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Our Services</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Services Buttons -->
-    <div class="flex flex-wrap justify-center mb-6 col-span-full gap-4">
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Window Glass">Window Glass</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Mirror Fitting">Mirror Fitting</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Aluminium Work">Aluminium Work</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Glass Cutting">Glass Cutting</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Glass Grinding">Glass Grinding</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Beveling">Beveling</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Glass Film">Glass Film</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Designer Glass">Designer Glass</button>
-      <button class="serviceBtn px-4 py-2 rounded-full border border-gray-300 hover:bg-emerald-500 hover:text-white" data-filter="Glass Partition">Glass Partition</button>
+<!-- SERVICES FILTER -->
+<section class="py-12 px-6 md:px-16">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Our Services</h2>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-center">
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="all">All</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Window Glass">🪟 Window Glass</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Mirror Fitting">🪞 Mirror Fitting</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Aluminium Work">🛠 Aluminium Work</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Glass Cutting">✂️ Glass Cutting</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Glass Grinding">🪚 Glass Grinding</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Beveling">🔹 Beveling</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Glass Film">🎨 Glass Film</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Designer Glass">✨ Designer Glass</button>
+    <button class="filterBtn py-2 px-4 bg-[#f7e7ce] rounded-lg text-[#0f2c4f] font-semibold btn-3d" data-filter="Glass Partition">🏢 Glass Partition</button>
+  </div>
+</section>
+
+<!-- FILTERABLE GALLERY -->
+<section class="py-12 px-6 md:px-16 bg-[#fdf6eb]">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Gallery</h2>
+
+  <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <img class="galleryItem card-3d" data-cat="Window Glass" src="https://source.unsplash.com/400x300/?glass,window" alt="Window Glass">
+    <img class="galleryItem card-3d" data-cat="Mirror Fitting" src="https://source.unsplash.com/400x300/?mirror" alt="Mirror Fitting">
+    <img class="galleryItem card-3d" data-cat="Aluminium Work" src="https://source.unsplash.com/400x300/?aluminium,frame" alt="Aluminium Work">
+    <img class="galleryItem card-3d" data-cat="Glass Cutting" src="https://source.unsplash.com/400x300/?glass,cutting" alt="Glass Cutting">
+    <img class="galleryItem card-3d" data-cat="Glass Grinding" src="https://source.unsplash.com/400x300/?glass,grinding" alt="Glass Grinding">
+    <img class="galleryItem card-3d" data-cat="Beveling" src="https://source.unsplash.com/400x300/?beveled,glass" alt="Beveling">
+    <img class="galleryItem card-3d" data-cat="Glass Film" src="https://source.unsplash.com/400x300/?glass,film" alt="Glass Film">
+    <img class="galleryItem card-3d" data-cat="Designer Glass" src="https://source.unsplash.com/400x300/?designer,glass" alt="Designer Glass">
+    <img class="galleryItem card-3d" data-cat="Glass Partition" src="https://source.unsplash.com/400x300/?glass,partition" alt="Glass Partition">
+
+  </div>
+</section>
+
+<!-- CUSTOMER REVIEWS -->
+<section class="py-12 px-6 md:px-16">
+  <h2 class="text-3xl font-bold text-center mb-6">What Our Customers Say</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-[#f7e7ce] p-6 rounded-xl shadow-lg card-3d">
+      <div class="text-yellow-400 text-4xl mb-2">★★★★★</div>
+      <p class="italic mb-2">“Amazing service! Mirror fitting was perfect!”</p>
+      <p class="font-semibold">– Anjali Mehra</p>
     </div>
-    
-    <!-- Service Cards (Images) -->
-    <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 col-span-full">
-      <!-- Window Glass -->
-      <img class="galleryItem card-3d glass-card" data-cat="Window Glass" src="photos/glass_1.jpeg" alt="Window Glass">
-      <img class="galleryItem card-3d glass-card" data-cat="Window Glass" src="photos/glass_2.jpeg" alt="Window Glass">
-
-      <!-- Glass Partition -->
-      <img class="galleryItem card-3d glass-card" data-cat="Glass Partition" src="photos/glass_partition_1.jpeg" alt="Glass Partition">
-      <img class="galleryItem card-3d glass-card" data-cat="Glass Partition" src="photos/glass_partition_2.jpeg" alt="Glass Partition">
-      <img class="galleryItem card-3d glass-card" data-cat="Glass Partition" src="photos/glass_partition_3.jpeg" alt="Glass Partition">
-      <img class="galleryItem card-3d glass-card" data-cat="Glass Partition" src="photos/glass_partition_4.jpeg" alt="Glass Partition">
-
-      <!-- Mirror Fitting -->
-      <img class="galleryItem card-3d glass-card" data-cat="Mirror Fitting" src="photos/mirror_1.jpeg" alt="Mirror Fitting">
-      <img class="galleryItem card-3d glass-card" data-cat="Mirror Fitting" src="photos/mirror_2.jpeg" alt="Mirror Fitting">
-
-      <!-- Aluminium Work -->
-      <img class="galleryItem card-3d glass-card" data-cat="Aluminium Work" src="photos/aluminium_work_1.jpeg" alt="Aluminium Work">
-
-      <!-- Glass Work -->
-      <img class="galleryItem card-3d glass-card" data-cat="Glass Work" src="photos/glass_work_1.jpeg" alt="Glass Work">
-      <img class="galleryItem card-3d glass-card" data-cat="Glass Work" src="photos/glass_work_2.jpeg" alt="Glass Work">
+    <div class="bg-[#f7e7ce] p-6 rounded-xl shadow-lg card-3d">
+      <div class="text-yellow-400 text-4xl mb-2">★★★★★</div>
+      <p class="italic mb-2">“Highly recommend for glass partitions!”</p>
+      <p class="font-semibold">– Rajat Singh</p>
+    </div>
+    <div class="bg-[#f7e7ce] p-6 rounded-xl shadow-lg card-3d">
+      <div class="text-yellow-400 text-4xl mb-2">★★★★★</div>
+      <p class="italic mb-2">“Fast and professional!”</p>
+      <p class="font-semibold">– Priya Sharma</p>
     </div>
   </div>
 </section>
 
-<!-- Customer Reviews Section -->
-<section class="py-12 px-6 bg-white">
-  <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">What Our Customers Say</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="glass-card p-4">
-      <p class="mb-2">★★★★★</p>
-      <p>"Great quality glass and professional fitting service!"</p>
-      <p class="mt-2 font-semibold">– Rajesh K.</p>
-    </div>
-    <div class="glass-card p-4">
-      <p class="mb-2">★★★★★</p>
-      <p>"Quick, reliable, and very clean work."</p>
-      <p class="mt-2 font-semibold">– Priya S.</p>
-    </div>
-    <div class="glass-card p-4">
-      <p class="mb-2">★★★★★</p>
-      <p>"Highly recommended for custom glass and partitions."</p>
-      <p class="mt-2 font-semibold">– Amit T.</p>
-    </div>
-    <div class="glass-card p-4">
-      <p class="mb-2">★★★★★</p>
-      <p>"Friendly staff and excellent quality mirrors!"</p>
-      <p class="mt-2 font-semibold">– Sneha R.</p>
-    </div>
+<!-- FOOTER -->
+<footer class="py-12 px-6 md:px-16 bg-[#fdf6eb] text-center">
+  <h3 class="text-xl font-semibold mb-4">Get In Touch</h3>
+  <div class="flex justify-center gap-4 flex-wrap mb-4">
+    <a href="https://wa.me/919810871877" class="btn-3d bg-[#22c55e] text-white py-3 px-8 rounded-xl shadow-lg hover:bg-[#16a34a]">Chat on WhatsApp</a>
+    <a href="tel:+919810871877" class="btn-3d bg-[#0f2c4f] text-[#fdf6eb] py-3 px-8 rounded-xl shadow-lg hover:bg-[#123d5e]">Call Now</a>
   </div>
-  <div class="text-center mt-6">
-    <a href="https://wa.me/919810871877" class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition">Submit Your Review</a>
-  </div>
-</section>
-
-<!-- Footer / CTA -->
-<footer class="py-12 px-6 bg-navy-900 text-white text-center">
-  <h2 class="text-2xl md:text-3xl font-bold mb-4">Get in Touch</h2>
-  <div class="flex flex-wrap justify-center gap-4 mb-4">
-    <a href="https://wa.me/919810871877" class="px-6 py-3 bg-emerald-500 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition">Chat on WhatsApp</a>
-    <a href="tel:+919810871877" class="px-6 py-3 bg-white text-navy-900 font-bold rounded-lg shadow-lg hover:scale-105 transition">Call Now</a>
-  </div>
-  <p class="mb-2">Delhi, India</p>
-  <p>© 2026 RK Glass House – All Rights Reserved</p>
+  <p class="text-[#0f2c4f]">Delhi, India</p>
+  <p class="text-[#0f2c4f] text-sm">© 2026 RK Glass House – All Rights Reserved</p>
 </footer>
 
+<!-- FILTER SCRIPT -->
 <script>
-  // Service Filter Logic
-  const buttons = document.querySelectorAll('.serviceBtn');
-  const items = document.querySelectorAll('.galleryItem');
+const buttons = document.querySelectorAll('.filterBtn');
+const items = document.querySelectorAll('.galleryItem');
 
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from all buttons
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.dataset.filter;
-      items.forEach(item => {
-        if(item.dataset.cat === filter || filter === 'All') {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.getAttribute('data-filter');
+    items.forEach(item => {
+      if(filter === 'all' || item.dataset.cat === filter) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
     });
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
   });
+});
 </script>
 
 </body>
