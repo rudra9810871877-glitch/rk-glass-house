@@ -1,83 +1,77 @@
-/* Body & Fonts */
+* { box-sizing: border-box; margin:0; padding:0; }
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1f1c2c, #928dab); /* luxury gradient */
-    color: #f5f5f5;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #3a3a6a); /* luxury dark gradient */
+    color: #fff;
+    padding: 15px;
 }
 
-/* Headings */
-h1 {
-    text-align: center;
-    color: #ffd700; /* luxury gold */
+/* Header & Badge */
+header { text-align: center; margin-bottom: 20px; }
+.header-badge {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFD700; /* Gold luxury */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
-h2 {
-    text-align: center;
-    margin-top: 40px;
-}
+.timing { font-size: 14px; color: #f0e68c; margin-top:5px; }
 
-/* Timing */
-.timing {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #f0e68c;
-}
-
-/* Services */
-.services {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
+/* Services Section */
+.services-section { text-align: center; margin-bottom: 30px; }
+.services-section h2 { margin-bottom: 12px; font-size:28px; letter-spacing:1px; }
+.services { display: flex; flex-wrap: wrap; justify-content: center; gap:12px; }
 .service-box {
-    background: rgba(255,255,255,0.1);
-    padding: 15px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    background: rgba(255,255,255,0.08);
+    padding:14px 25px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:500;
 }
-.service-box:hover {
-    background: #ffd700;
-    color: #000;
-}
+.service-box:hover { background:#FFD700; color:#000; transform:scale(1.05); }
 
 /* Sliders */
 #photo-slider, #video-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding: 10px;
+    display:flex; overflow-x:auto; gap:12px; padding:12px;
     scroll-behavior: smooth;
 }
 #photo-slider img, #video-slider video {
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
+    border-radius:12px; cursor:pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-#photo-slider img:hover, #video-slider video:hover {
+#photo-slider img:hover, #video-slider video:hover { 
     transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
 }
 
 /* Floating Buttons */
 .whatsapp, .call {
     position: fixed;
-    bottom: 20px;
-    padding: 12px 18px;
-    border-radius: 50px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    bottom:20px; padding:14px 20px; border-radius:50px; font-weight:bold; color:#fff;
+    text-decoration:none; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index:1000;
+    transition: transform 0.3s;
 }
-.whatsapp { right: 100px; background: #25D366; }
-.call { right: 20px; background: #1E90FF; }
+.whatsapp:hover, .call:hover { transform: scale(1.1); }
+.whatsapp { right:100px; background:#25D366; }
+.call { right:20px; background:#1E90FF; }
 
-/* Reviews */
-.reviews {
-    margin-top: 40px;
-    text-align: center;
+/* Reviews Section */
+.reviews { margin-top:40px; text-align:center; }
+
+/* Scrollbar Styling */
+#photo-slider::-webkit-scrollbar, #video-slider::-webkit-scrollbar {
+  height:8px;
+}
+#photo-slider::-webkit-scrollbar-thumb, #video-slider::-webkit-scrollbar-thumb {
+  background:#FFD700; border-radius:10px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .services { flex-direction: column; }
+    #photo-slider img, #video-slider video { width:220px; }
+    .header-badge { font-size:26px; }
+    .services-section h2 { font-size:24px; }
 }
