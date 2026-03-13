@@ -1,10 +1,10 @@
-// 3D Animated Gradient Particles Background
+// 3D Animated Particle Background
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const colors = ['#00d4ff','#0059b3','#00ffbb','#00a3b3','#0077ff'];
+const colors = ['#5f9ea0','#a0c4ff','#128C7E','#25D366'];
 const particles = [];
 for(let i=0;i<180;i++){
   particles.push({
@@ -32,8 +32,10 @@ function animate(){
 }
 animate();
 
-// Gallery + Videos
+// Slide Gallery + Videos
 const gallery = document.getElementById('gallery-container');
+const slideGallery = document.querySelector('.slide-gallery') || gallery;
+
 const mediaFiles = [
   'images/photo1.jpg',
   'images/photo2.jpg',
@@ -66,7 +68,7 @@ mediaFiles.forEach(file=>{
       lightboxImg.src=file;
     }
   });
-  gallery.appendChild(el);
+  slideGallery.appendChild(el);
 });
 
 closeBtn.addEventListener('click', ()=>{
