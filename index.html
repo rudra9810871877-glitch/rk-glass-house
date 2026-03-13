@@ -45,9 +45,23 @@
 <div id="video-slider"></div>
 </section>
 
-<section class="reviews">
+<section class="reviews-section">
 <h2>Customer Reviews</h2>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+<form id="review-form">
+<input type="text" id="name" placeholder="Your Name" required>
+<select id="rating" required>
+  <option value="">Rating</option>
+  <option value="5">★★★★★</option>
+  <option value="4">★★★★</option>
+  <option value="3">★★★</option>
+  <option value="2">★★</option>
+  <option value="1">★</option>
+</select>
+<textarea id="message" placeholder="Your Review" required></textarea>
+<input type="file" id="photo">
+<button type="submit">Submit Review</button>
+</form>
+<div id="reviews-display"></div>
 </section>
 
 <footer>
