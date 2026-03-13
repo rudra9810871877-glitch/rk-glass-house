@@ -1,21 +1,21 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Poppins',sans-serif;background:#00473E;color:#F3E5D8;padding:15px;}
 header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;border-radius:12px;margin-bottom:20px;background:#00473E;}
-.header-left{font-size:32px;font-weight:600;color:#F3E5D8;}
+.header-left{font-size:36px;font-weight:700;color:#F3E5D8;}
 .header-right{font-size:16px;color:#F3E5D8;}
 .hero-section{position:relative;height:250px;margin-bottom:20px;border-radius:12px;overflow:hidden;}
 canvas#particles{position:absolute;top:0;left:0;width:100%;height:100%;}
 .services-section{text-align:center;margin-bottom:30px;}
 .service-note{font-size:14px;color:#A8D5BA;margin-bottom:8px;}
 .services{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
-.service-box{background: rgba(243,229,216,0.15); padding:14px 25px; border-radius:12px; cursor:pointer; transition:0.3s; font-weight:500;}
+.service-box{background: rgba(243,229,216,0.15); padding:14px 25px; border-radius:12px; cursor:pointer; transition:0.3s; font-weight:500; width:180px; text-align:center;}
 .service-box:hover{background:#A8D5BA;color:#00473E;transform:scale(1.05);box-shadow:0 8px 15px rgba(0,0,0,0.3);}
 #photo-slider,#video-slider{display:flex;overflow-x:auto;gap:12px;padding:12px;scroll-behavior:smooth;}
 #photo-slider img,#video-slider video{border-radius:12px;cursor:pointer;transition: transform 0.3s, box-shadow 0.3s;}
 #photo-slider img:hover,#video-slider video:hover{transform: scale(1.05);box-shadow:0 8px 15px rgba(0,0,0,0.4);}
 .whatsapp,.call{position:fixed;bottom:20px;padding:14px 20px;border-radius:50px;font-weight:bold;color:#fff;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.5);z-index:1000;transition: transform 0.3s, box-shadow 0.3s;}
 .whatsapp:hover,.call:hover{transform: scale(1.1);box-shadow:0 8px 20px rgba(0,0,0,0.5);}
-.whatsapp{right:100px;background:#25D366;}
+.whatsapp{right:120px;background:#25D366;}
 .call{right:20px;background:#F3E5D8;color:#00473E;}
 .reviews-section{margin-top:40px;text-align:center;background: rgba(243,229,216,0.1);padding:20px;border-radius:12px;}
 #review-form{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
@@ -24,4 +24,5 @@ canvas#particles{position:absolute;top:0;left:0;width:100%;height:100%;}
 #review-form button:hover{background:#F3E5D8;transform:scale(1.05);}
 #reviews-display .review-card{background: rgba(243,229,216,0.15); padding:12px;border-radius:10px;margin-bottom:10px;}
 footer{text-align:center;margin-top:30px;font-size:14px;color:#F3E5D8;}
-@media(max-width:768px){.services{flex-direction:column;}#photo-slider img,#video-slider video{width:220px;}.header-left{font-size:26px;}}
+footer iframe{border-radius:12px;margin-top:10px;}
+@media(max-width:768px){.services{flex-direction:column;}.service-box{width:90%;}.header-left{font-size:28px;}}
