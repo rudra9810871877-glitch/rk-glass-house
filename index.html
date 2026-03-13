@@ -1,167 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RK Glass House</title>
-<style>
-/* General Styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background: linear-gradient(120deg, #e0f7fa, #f1f8e9);
-  color: #333;
-}
-header {
-  background: linear-gradient(to right, #004d40, #00796b);
-  color: white;
-  text-align: center;
-  padding: 25px 10px;
-}
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  text-shadow: 1px 1px 2px #00000055;
-}
-header p {
-  font-size: 1.1em;
-  margin-top: 5px;
-}
-
-/* Section Styling */
-section {
-  padding: 20px 15px;
-  margin: 10px auto;
-  max-width: 1000px;
-  background: rgba(255,255,255,0.85);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Services */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-}
-.card {
-  background: linear-gradient(145deg, #ffffff, #c8e6c9);
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-  text-align: center;
-  font-weight: 600;
-  color: #004d40;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-}
-
-/* Gallery & Videos */
-.gallery, .videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  margin-top: 10px;
-}
-.placeholder {
-  background: #b2dfdb;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #004d40;
-  font-weight: bold;
-  border-radius: 10px;
-  font-size: 0.95em;
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Contact */
-button {
-  padding: 12px 22px;
-  background: #00796b;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 1em;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s, transform 0.3s;
-}
-button:hover {
-  background: #004d40;
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background: linear-gradient(to right, #004d40, #00796b);
-  color: white;
-  text-align: center;
-  padding: 18px 10px;
-  margin-top: 20px;
-  font-size: 0.9em;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RK Glass House Aluminium Fabrication</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <!-- 3D Animated Background -->
+  <canvas id="bg-canvas"></canvas>
 
-<header>
-<h1>RK Glass House</h1>
-<p>Professional Glass & Aluminium Work Services</p>
-</header>
+  <!-- Header / Hero Section -->
+  <header>
+    <h1>RK Glass House Aluminium Fabrication</h1>
+    <p>Professional Glass & Aluminium Services in Faridabad | Serving Delhi NCR</p>
+  </header>
 
-<section>
-<h2>Our Services</h2>
-<div class="services">
-  <div class="card">Window Glass</div>
-  <div class="card">Mirror Fitting</div>
-  <div class="card">Aluminium Work</div>
-  <div class="card">Glass Cutting</div>
-  <div class="card">Glass Film</div>
-  <div class="card">Glass Grinding</div>
-  <div class="card">Beveling</div>
-</div>
-</section>
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Window Glass</li>
+      <li>Mirror Fitting</li>
+      <li>Aluminium Work</li>
+      <li>Glass Cutting</li>
+      <li>Glass Grinding</li>
+      <li>Beveling</li>
+      <li>Glass Film</li>
+      <li>Designer Glass</li>
+      <li>Glass Partition</li>
+    </ul>
+  </section>
 
-<section>
-<h2>Gallery</h2>
-<div class="gallery">
-  <div class="placeholder">Photos will be added here</div>
-  <div class="placeholder">Photos will be added here</div>
-</div>
-</section>
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div id="gallery-container"></div>
+  </section>
 
-<section>
-<h2>Videos</h2>
-<div class="videos">
-  <div class="placeholder">Videos will be added here</div>
-  <div class="placeholder">Videos will be added here</div>
-</div>
-</section>
+  <!-- Location Section -->
+  <section id="location">
+    <h2>Our Location</h2>
+    <iframe 
+      src="https://www.google.com/maps?q=28.4331,77.3002&hl=es;z=17&output=embed" 
+      width="100%" 
+      height="300" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </section>
 
-<section>
-<h2>Contact</h2>
-<p>Address: Shop no 1, Dayal Bagh Road, Near Reliance Fresh, Eros Garden Faridabad</p>
-<p>Phone: 9810871877 / 9810071877</p>
-<a href="https://wa.me/919810871877" target="_blank">
-  <button>Chat on WhatsApp</button>
-</a>
-</section>
-
-<section>
-<h2>Location</h2>
-<div class="placeholder">Google Maps location will be added here</div>
-</section>
-
-<footer>
-<p>© RK Glass House</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
