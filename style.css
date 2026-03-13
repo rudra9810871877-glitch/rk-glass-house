@@ -1,77 +1,43 @@
 * { box-sizing: border-box; margin:0; padding:0; }
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1c1c1c, #3a3a6a); /* luxury dark gradient */
-    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #001f3f, #f0f0f0);
+    color: #f5f5f5;
     padding: 15px;
 }
 
-/* Header & Badge */
-header { text-align: center; margin-bottom: 20px; }
-.header-badge {
-    font-size: 32px;
-    font-weight: 700;
-    color: #FFD700; /* Gold luxury */
-    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}
-.timing { font-size: 14px; color: #f0e68c; margin-top:5px; }
+/* Header */
+header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-radius: 12px; margin-bottom: 20px; background:#003366;}
+.header-left { font-size:32px; font-weight:600; color:#00b894; }
+.header-right { font-size:16px; font-weight:400; color:#f0f0f0; }
 
-/* Services Section */
-.services-section { text-align: center; margin-bottom: 30px; }
-.services-section h2 { margin-bottom: 12px; font-size:28px; letter-spacing:1px; }
-.services { display: flex; flex-wrap: wrap; justify-content: center; gap:12px; }
-.service-box {
-    background: rgba(255,255,255,0.08);
-    padding:14px 25px;
-    border-radius:12px;
-    cursor:pointer;
-    transition:0.3s;
-    font-weight:500;
-}
-.service-box:hover { background:#FFD700; color:#000; transform:scale(1.05); }
+/* Hero */
+.hero-section { position:relative; height:250px; margin-bottom:20px; }
+canvas#particles { position:absolute; top:0; left:0; width:100%; height:100%; }
+
+/* Services */
+.services-section { text-align:center; margin-bottom:30px; }
+.service-note { font-size:14px; color:#2ecc71; margin-bottom:8px; }
+.services { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+.service-box { background: rgba(255,255,255,0.08); padding:14px 25px; border-radius:12px; cursor:pointer; transition:0.3s; font-weight:500;}
+.service-box:hover { background:#00b894; color:#fff; transform:scale(1.05); }
 
 /* Sliders */
-#photo-slider, #video-slider {
-    display:flex; overflow-x:auto; gap:12px; padding:12px;
-    scroll-behavior: smooth;
-}
-#photo-slider img, #video-slider video {
-    border-radius:12px; cursor:pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-#photo-slider img:hover, #video-slider video:hover { 
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5);
-}
+#photo-slider, #video-slider { display:flex; overflow-x:auto; gap:12px; padding:12px; scroll-behavior: smooth; }
+#photo-slider img, #video-slider video { border-radius:12px; cursor:pointer; transition: transform 0.3s, box-shadow 0.3s; }
+#photo-slider img:hover, #video-slider video:hover { transform: scale(1.05); box-shadow: 0 8px 15px rgba(0,0,0,0.4); }
 
 /* Floating Buttons */
-.whatsapp, .call {
-    position: fixed;
-    bottom:20px; padding:14px 20px; border-radius:50px; font-weight:bold; color:#fff;
-    text-decoration:none; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    z-index:1000;
-    transition: transform 0.3s;
-}
+.whatsapp, .call { position: fixed; bottom:20px; padding:14px 20px; border-radius:50px; font-weight:bold; color:#fff; text-decoration:none; box-shadow:0 4px 10px rgba(0,0,0,0.5); z-index:1000; transition: transform 0.3s;}
 .whatsapp:hover, .call:hover { transform: scale(1.1); }
 .whatsapp { right:100px; background:#25D366; }
-.call { right:20px; background:#1E90FF; }
+.call { right:20px; background:#00b894; }
 
 /* Reviews Section */
 .reviews { margin-top:40px; text-align:center; }
 
-/* Scrollbar Styling */
-#photo-slider::-webkit-scrollbar, #video-slider::-webkit-scrollbar {
-  height:8px;
-}
-#photo-slider::-webkit-scrollbar-thumb, #video-slider::-webkit-scrollbar-thumb {
-  background:#FFD700; border-radius:10px;
-}
+/* Footer */
+footer { text-align:center; margin-top:30px; font-size:14px; color:#dfe6e9; }
 
 /* Responsive */
-@media(max-width:768px){
-    .services { flex-direction: column; }
-    #photo-slider img, #video-slider video { width:220px; }
-    .header-badge { font-size:26px; }
-    .services-section h2 { font-size:24px; }
-}
+@media(max-width:768px){ .services { flex-direction: column; } #photo-slider img, #video-slider video { width:220px; } .header-left { font-size:26px; } }
